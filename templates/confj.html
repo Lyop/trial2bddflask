@@ -1,0 +1,19 @@
+{% extends "base.html"%}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <h1> HERE YOU GO </h1>
+        <ul>
+            <li> Toy name : {{ session['toy_name'] }}</li>
+            <li> Toy num : {{ session['toy_no'] }}</li>
+            {% if session['toy_no'] %}
+            YES
+            {% else %}
+            Non
+            {% endif %}
+            <li> toy desc : {{ session['toy_desc'] }}</li>
+            <li> toy category : {{ session['toy_categ'] }}</li>
+        </ul>
+    </div>
+
+{% endblock %}

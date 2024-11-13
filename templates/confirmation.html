@@ -1,0 +1,23 @@
+{% extends "base.html"%}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <h1> Merci de votre insription. Voici les informations saisies: </h1>
+        <ul>
+            <li> Surname and name : {{ session['name_par'] }}</li>
+            <li> pilot : {{ session['pilot'] }}</li>
+            {% if session['name_par'] %}
+            Oui
+            {% else %}
+            Non
+            {% endif %}
+            <li> gender : {{ session['gender'] }}</li>
+            <li> dpt : {{ session['dpt'] }}</li>
+            <li> remarks : {{ session['remarks'] }}</li>
+        </ul>
+    </div>
+    <div class="row">
+        
+    </div>
+
+{% endblock %}

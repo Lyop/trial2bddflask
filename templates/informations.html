@@ -1,0 +1,22 @@
+{% from "_macros_form.html" import afficher_champ %}
+
+{% extends "base.html"%}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <h1> Enter toy deets 👀 </h1>
+        <form method="POST", action="{{url_for('toy_information')}}" novalidate>
+            {{form.hidden_tag()}}
+            {{afficher_champ(form.toy_no)}}
+            {{afficher_champ(form.toy_categ)}}
+            {{afficher_champ(form.toy_name)}}
+            {{afficher_champ(form.toy_desc)}}
+
+
+        </form>
+    </div>
+</div>
+
+
+
+{% endblock %}

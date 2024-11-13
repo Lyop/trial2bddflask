@@ -1,0 +1,9 @@
+{% macro afficher_champ(field) %}
+<div>
+    {{ field.label }}
+    {{ field() }}
+    {% for error in field.errors %}
+    <div class="erreur">{{ error }}</div>
+    {% endfor %}
+    </div>
+{% endmacro %}
